@@ -8,11 +8,16 @@ model = torch.load('trained_model.pth')
 station_columns = ['station_baguera', 'station_banfora_agri', 'station_baraboule', 'station_batie', 'station_bereba', 'station_beregadougou', 'station_betare', 'station_bogande', 'station_bousse', 'station_dedougou', 'station_diebougou', 'station_dionkele', 'station_fada_ngourma', 'station_gayeri', 'station_hounde', 'station_kamboince', 'station_koupela', 'station_leo', 'station_leri', 'station_mane', 'station_mogtedo', 'station_nobere', 'station_pabre', 'station_piela', 'station_po', 'station_pobe_mengao', 'station_reo_agri', 'station_safane', 'station_sapone', 'station_seguenega', 'station_sideradougou', 'station_soubakaniedougou', 'station_tanghin_dassouri', 'station_tikare', 'station_toeni', 'station_vallee_du_kou', 'station_zabre']
 
 def preprocess_input(latitude, longitude, station_name):
+    # Check if the station name exists in the list of station names
+    if 'station_' + station_name in station_columns:
+        station_data = [0] * len(station_columns)
+        station_data[station_columns.index('station_' + station_name)] = 1
+        latlong_data = [latitude, longitude]
+        return station_data, latlong_data
+    else:
+        # Return None for station_data and latlong_data if station name is not found
+        return None, None
 
-    station_data = [0] * len(station_columns)
-    station_data[station_columns.index('station_' + station_name)] = 1
-    latlong_data = [latitude, longitude]
-    return station_data, latlong_data
 
 def predict_rainfall(year, month, day, station_data, latlong_data):
     features = [year, month, day] + station_data + latlong_data
