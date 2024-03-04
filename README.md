@@ -14,16 +14,16 @@ The model is trained using historical rainfall data from the satellites. The tra
 #### Prediction
 
 Once trained, the model can be used to make predictions for future rainfall. Given input features such as date and geographical coordinates, the model predicts the rainfall levels for the specified locations. Additionally, the predicted rainfall values are classified into categories representing different intensity levels, such as no rain, light rain, storm, and flood.
-Requirements
 
-
+##### Requirements
 
 Install these dependencies using pip install -r requirements.txt.
-Usage
+
+###### Usage
 
 To use the prediction app, run the app.py script using Streamlit. Enter the latitude, longitude, and name of the station for which you want to predict rainfall. The app will display the predicted rainfall level and intensity category for the specified location.
 
 ##### Contributors
 
-<I>Maximilien Kpizingui<br>
-<I> Arnaud Kima
+<I>Maximilien Kpizingui, maximilien@maximilien.tech<br>
+<I>Arnaud Kima,  kimaarnaud1@gmail.com <br>
