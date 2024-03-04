@@ -30,10 +30,10 @@ def classify_rainfall_intensity(predicted_rainfall):
     else:
         return 'Flood'
 
-st.title('Rainfall Prediction App in 143 region in Burkina Faso')
+st.title('Rainfall Prediction App in 143 locations in Burkina Faso')
 
 image = 'location-burkina.png'  
-st.image(image, caption='143 location in Burkina collected from 4 satellites', use_column_width=True)
+st.image(image, caption='143 locations in Burkina collected from 4 satellites', use_column_width=True)
 
 year = st.number_input('Enter year', value=2021)
 month = st.number_input('Enter month', min_value=1, max_value=12, value=1)
