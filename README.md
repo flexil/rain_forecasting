@@ -22,6 +22,8 @@ Install these dependencies using pip install -r requirements.txt.
 Usage
 
 To use the prediction app, run the app.py script using Streamlit. Enter the latitude, longitude, and name of the station for which you want to predict rainfall. The app will display the predicted rainfall level and intensity category for the specified location.
-<br>Contributors
+
+##### Contributors
+
 <I>Maximilien Kpizingui<br>
 <I> Arnaud Kima
