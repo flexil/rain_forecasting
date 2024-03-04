@@ -1,0 +1,8 @@
+torch
+scikit-learn
+pandas
+numppy
+folium
+streamlit
+fuzzywuzzy
+python-Levenshtein
