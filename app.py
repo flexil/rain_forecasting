@@ -32,6 +32,9 @@ def classify_rainfall_intensity(predicted_rainfall):
 
 st.title('Rainfall Prediction App in 143 region in Burkina Faso')
 
+image = 'location-burkina.png'  
+st.image(image, caption='143 location in Burkina collected from 4 satellites', use_column_width=True)
+
 year = st.number_input('Enter year', value=2021)
 month = st.number_input('Enter month', min_value=1, max_value=12, value=1)
 day = st.number_input('Enter day', min_value=1, max_value=31, value=1)
